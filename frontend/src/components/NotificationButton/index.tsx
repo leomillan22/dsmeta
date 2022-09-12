@@ -20,9 +20,7 @@ function NotificationButton( {saleId} : Props) {
 
 function handleClick(id: number){
   axios(`${BASE_URL}/SALES/${id}/notification`)
-      .then(response => {
-        toast.info("SMS enviado com sucesso")
-      })
+      .then(response => toast.info("SMS enviado com sucesso"))
 }
 
 export default NotificationButton
